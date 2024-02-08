@@ -1,17 +1,14 @@
-#pragma once
-#include <stdio.h>
-#include "vars.h"
 #ifdef _MSC_VER
 #define _CRT_SECURE_NO_WARNINGS
 #endif
+#pragma once
+#include <stdio.h>
+#include "vars.h"
 
-int image_pgm[HEIGHT][WIDTH];
-int image_ppm[HEIGHT][WIDTH];
-int image_pbm[HEIGHT][WIDTH];
 
-
-void pgm()
+void pgm(int width, int height)
 {
+    
     // add a script for calculating width and height of array
     int i, j, temp = 0;
 
@@ -20,13 +17,13 @@ void pgm()
 
     fprintf(pgm_img, "P2\n");
 
-    fprintf(pgm_img, "%d %d\n", WIDTH, HEIGHT);
+    fprintf(pgm_img, "%d %d\n", width, height);
 
     fprintf(pgm_img, "255\n");
     int cnt = 0;
-    for (i = 0; i < HEIGHT; i++) {
-        for (j = 0; j < WIDTH; j++) {
-            temp = image_pgm[i][j];
+    for (i = 0; i < height; i++) {
+        for (j = 0; j < width; j++) {
+            temp = image[i][j];
             fprintf(pgm_img, "%d ", temp);
         }
         fprintf(pgm_img, "\n");
@@ -35,7 +32,7 @@ void pgm()
 }
 
 
-void pbm()
+void pbm(int width, int height)
 {
     // add a script for calculating width and height of array
     int i, j, temp = 0;
@@ -45,13 +42,13 @@ void pbm()
 
     fprintf(pbm_img, "P1\n");
 
-    fprintf(pbm_img, "%d %d\n", WIDTH, HEIGHT);
+    fprintf(pbm_img, "%d %d\n", width, height);
 
     fprintf(pbm_img, "1\n");
     int cnt = 0;
-    for (i = 0; i < HEIGHT; i++) {
-        for (j = 0; j < WIDTH; j++) {
-            temp = image_pbm[i][j];
+    for (i = 0; i < height; i++) {
+        for (j = 0; j < width; j++) {
+            temp = image[i][j];
             fprintf(pbm_img, "%d ", temp);
         }
         fprintf(pbm_img, "\n");
@@ -60,7 +57,7 @@ void pbm()
 }
 
 
-void ppm()
+void ppm(int width, int height)
 {
     // add a script for calculating width and height of array
     int i, j, temp = 0;
@@ -70,13 +67,13 @@ void ppm()
 
     fprintf(ppm_img, "P3\n");
 
-    fprintf(ppm_img, "%d %d\n", WIDTH, HEIGHT);
+    fprintf(ppm_img, "%d %d\n", width, height);
 
     fprintf(ppm_img, "255\n");
     int cnt = 0;
-    for (i = 0; i < HEIGHT; i++) {
-        for (j = 0; j < WIDTH; j++) {
-            temp = image_ppm[i][j];
+    for (i = 0; i < height; i++) {
+        for (j = 0; j < width; j++) {
+            temp = image[i][j];
             fprintf(ppm_img, "%d ", temp);
         }
         fprintf(ppm_img, "\n");
