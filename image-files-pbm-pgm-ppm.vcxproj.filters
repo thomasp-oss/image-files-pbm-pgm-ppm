@@ -18,9 +18,6 @@
     <None Include="walkthrough.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="image_converter.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>

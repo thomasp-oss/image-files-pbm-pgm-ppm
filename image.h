@@ -9,12 +9,6 @@ int image_pgm[HEIGHT][WIDTH];
 int image_ppm[HEIGHT][WIDTH];
 int image_pbm[HEIGHT][WIDTH];
 
-naming()
-{
-	printf("Enter the name of the image: \n");
-	scanf("%s", &img);
-}
-
 
 void pgm()
 {
@@ -49,11 +43,11 @@ void pbm()
     FILE* pbm_img;
     pbm_img = fopen(strcat(img, ".pbm"), "wb");
 
-    fprintf(pbm_img, "P2\n");
+    fprintf(pbm_img, "P1\n");
 
     fprintf(pbm_img, "%d %d\n", WIDTH, HEIGHT);
 
-    fprintf(pbm_img, "255\n");
+    fprintf(pbm_img, "1\n");
     int cnt = 0;
     for (i = 0; i < HEIGHT; i++) {
         for (j = 0; j < WIDTH; j++) {
@@ -74,7 +68,7 @@ void ppm()
     FILE* ppm_img;
     ppm_img = fopen(strcat(img, ".ppm"), "wb");
 
-    fprintf(ppm_img, "P2\n");
+    fprintf(ppm_img, "P3\n");
 
     fprintf(ppm_img, "%d %d\n", WIDTH, HEIGHT);
 

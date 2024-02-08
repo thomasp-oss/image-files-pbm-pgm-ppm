@@ -22,7 +22,6 @@
     <None Include="walkthrough.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="image_converter.c" />
     <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
