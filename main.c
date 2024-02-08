@@ -4,14 +4,15 @@
 #include <stdio.h>
 #include "image.h"
 #include "vars.h"
+// Before running main.c, make sure that the array in the image.h file is updated with the image data and the width and height of the image
 
 int main()
 {
-	// IMPORTANT: update the image array with the image data in the vars.h file, this should include the full array and the width and height of the image
 	int height_s = sizeof(image);
 	int width_s = sizeof(image[0]);
 	printf("IMPORTANT: update the image array with the image data in the vars.h file\nthis should include the full array and the width and height of the image\n\n");
 	printf("Enter the name of the image: \n");
+
 	scanf_s("%50s", &img, 50);
 	if (img == NULL)
 	{
@@ -25,6 +26,7 @@ int main()
 	{
 		fprintf(stdout, "The image name is now: %s\n\n", img);
 	}
+
 	fprintf(stdout, "select an image type to convert by entering one of the following numbers: 1 = pbm, 2 = pgm, 3 = ppm\n");
 	int temp;
 	scanf_s("%d", &temp);
