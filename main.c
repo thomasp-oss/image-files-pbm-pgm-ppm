@@ -8,7 +8,7 @@
 int main()
 {
 	printf("Enter the name of the image: \n");
-	scanf_s("%50s", &img, (unsigned)_countof(img));
+	scanf_s("%50s", &img, 50);
 	printf("Enter the image array in the form of an array of depth 2, e.g. {{1, 0, 0}}");
 	int input_image;
 	scanf_s("%d", &input_image);
