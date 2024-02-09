@@ -8,7 +8,7 @@
 
 void pgm()
 {
-    
+
     // add a script for calculating width and height of array
     int i, j;
 
@@ -21,7 +21,7 @@ void pgm()
 
     fprintf(pgm_img, "255\n");
 
-    int cnt = 0;
+    int count = 0;
     for (i = 0; i < HEIGHT; i++) {
         for (j = 0; j < WIDTH; j++) {
             fprintf(pgm_img, "%d ", image[i][j]);
@@ -45,7 +45,7 @@ void pbm()
     fprintf(pbm_img, "%d %d\n", WIDTH, HEIGHT);
 
     fprintf(pbm_img, "1\n");
-    int cnt = 0;
+    int count = 0;
     for (i = 0; i < HEIGHT; i++) {
         for (j = 0; j < WIDTH; j++) {
             fprintf(pbm_img, "%d ", image[i][j]);
@@ -69,7 +69,7 @@ void ppm()
     fprintf(ppm_img, "%d %d\n", WIDTH, HEIGHT);
 
     fprintf(ppm_img, "255\n");
-    int cnt = 0;
+    int count = 0;
     for (i = 0; i < HEIGHT; i++) {
         for (j = 0; j < WIDTH; j++) {
             fprintf(ppm_img, "%d ", image[i][j]);
