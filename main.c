@@ -28,19 +28,19 @@ int main()
 	}
 
 	fprintf(stdout, "select an image type to convert by entering one of the following numbers: 1 = pbm, 2 = pgm, 3 = ppm\n");
-	int temp;
-	scanf_s("%d", &temp);
-		if (temp == 1)
+	int tmp;
+	scanf_s("%d", &tmp);
+		if (tmp == 1)
 		{
-			pbm(width_s, height_s);
+			pbm();
 		}
-		else if (temp == 2)
+		else if (tmp == 2)
 		{
-			pgm(width_s, height_s);
+			pgm();
 		}
-		else if (temp == 3)
+		else if (tmp == 3)
 		{
-			ppm(width_s, height_s);
+			ppm();
 		}
 		else
 		{

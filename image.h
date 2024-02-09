@@ -10,7 +10,7 @@ void pgm()
 {
     
     // add a script for calculating width and height of array
-    int i, j, temp = 0;
+    int i, j;
 
     FILE* pgm_img;
     pgm_img = fopen(strcat(img, ".pgm"), "wb");
@@ -20,11 +20,11 @@ void pgm()
     fprintf(pgm_img, "%d %d\n", WIDTH, HEIGHT);
 
     fprintf(pgm_img, "255\n");
+
     int cnt = 0;
     for (i = 0; i < HEIGHT; i++) {
         for (j = 0; j < WIDTH; j++) {
-            temp = image[i][j];
-            fprintf(pgm_img, "%d ", temp);
+            fprintf(pgm_img, "%d ", image[i][j]);
         }
         fprintf(pgm_img, "\n");
     }
@@ -35,7 +35,7 @@ void pgm()
 void pbm()
 {
     // add a script for calculating width and height of array
-    int i, j, temp = 0;
+    int i, j;
 
     FILE* pbm_img;
     pbm_img = fopen(strcat(img, ".pbm"), "wb");
@@ -48,8 +48,7 @@ void pbm()
     int cnt = 0;
     for (i = 0; i < HEIGHT; i++) {
         for (j = 0; j < WIDTH; j++) {
-            temp = image[i][j];
-            fprintf(pbm_img, "%d ", temp);
+            fprintf(pbm_img, "%d ", image[i][j]);
         }
         fprintf(pbm_img, "\n");
     }
@@ -60,7 +59,7 @@ void pbm()
 void ppm()
 {
     // add a script for calculating width and height of array
-    int i, j, temp = 0;
+    int i, j;
 
     FILE* ppm_img;
     ppm_img = fopen(strcat(img, ".ppm"), "wb");
@@ -73,8 +72,7 @@ void ppm()
     int cnt = 0;
     for (i = 0; i < HEIGHT; i++) {
         for (j = 0; j < WIDTH; j++) {
-            temp = image[i][j];
-            fprintf(ppm_img, "%d ", temp);
+            fprintf(ppm_img, "%d ", image[i][j]);
         }
         fprintf(ppm_img, "\n");
     }
